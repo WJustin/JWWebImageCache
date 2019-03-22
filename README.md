@@ -5,11 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/JWWebImageCache.svg?style=flat)](https://cocoapods.org/pods/JWWebImageCache)
 [![Platform](https://img.shields.io/cocoapods/p/JWWebImageCache.svg?style=flat)](https://cocoapods.org/pods/JWWebImageCache)
 
+## Introduction
+
+JWWebImageCache can share image cache between WKWebView and Native. And you can integrate image caching framework used in your project. For instance, YYWebImage or SDWebImage.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
 
 ## Installation
 
@@ -19,7 +21,17 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'JWWebImageCache', :git => 'https://github.com/WJustin/JWWebImageCache.git'
 ```
+## Useage
 
+ ### 1 Integrate image caching framework  
+    if you use SDWebImage, you can copy the SDWebImageDownlodHandler class to your project.
+    if you use YYWebImage, you can copy the YYWebImageDownloadHandler class to your project.
+    
+ ### 2 setup sdk
+    for example: SDWebImage
+    id <JWDownloadProtocol> handler = [[SDWebImageDownlodHandler alloc] init];
+    [JWWebImageCache setupWithDelegate:handler];
+ 
 ## Author
 
 Justin.wang, wangrongchao@126.com
