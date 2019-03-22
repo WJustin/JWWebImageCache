@@ -17,7 +17,7 @@ JWWebImageCache is available through [CocoaPods](https://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'JWWebImageCache'
+pod 'JWWebImageCache', :git => 'https://github.com/WJustin/JWWebImageCache.git'
 ```
 
 ## Author

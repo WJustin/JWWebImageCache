@@ -12,6 +12,7 @@
 @interface JWViewController ()
 
 @property (nonatomic, strong) WKWebView *webView;
+@property (nonatomic, strong) UIButton *reloadButton;
 
 @end
 
@@ -19,27 +20,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initWKWebView];
+    [self initUI];
+    [self reload];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    NSString *path = [[NSBundle mainBundle] bundlePath];
-    NSURL *baseURL = [NSURL fileURLWithPath:path];
-    NSString * htmlPath = [[NSBundle mainBundle] pathForResource:@"local"
-                                                          ofType:@"html"];
-    NSString * htmlCont = [NSString stringWithContentsOfFile:htmlPath
-                                                    encoding:NSUTF8StringEncoding
-                                                       error:nil];
-    [self.webView loadHTMLString:htmlCont baseURL:baseURL];
-}
-
-- (void)initWKWebView {
+- (void)initUI {
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
     self.webView = [[WKWebView alloc] initWithFrame:self.view.bounds
                                       configuration:configuration];
     self.webView.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal;
     [self.view addSubview:self.webView];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.backgroundColor = [UIColor redColor];
+    button.center = self.view.center;
+    button.bounds = CGRectMake(0, 0, 100, 50);
+    [button setTitle:@"reload" forState:UIControlStateNormal];
+    [button addTarget:self
+               action:@selector(reload)
+     forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+
+- (void)reload {
+    NSMutableURLRequest *mutableRequest = [[NSMutableURLRequest alloc] init];
+    mutableRequest.URL = [NSURL URLWithString:@"https://www.baidu.com/"];
+    [self.webView loadRequest:mutableRequest];
 }
 
 @end

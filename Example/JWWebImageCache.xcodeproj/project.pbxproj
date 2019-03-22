@@ -24,7 +24,6 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		987D93941D879CCBB432DFF6 /* Pods_JWWebImageCache_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD30146D17710258493A6A56 /* Pods_JWWebImageCache_Tests.framework */; };
 		B6343F3726FDB84B4B20068D /* Pods_JWWebImageCache_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853F69392926745F3DEDEE02 /* Pods_JWWebImageCache_Example.framework */; };
-		BAAC1FF52244CBEE00938620 /* local.html in Resources */ = {isa = PBXBuildFile; fileRef = BAAC1FF42244CBED00938620 /* local.html */; };
 		BAAC1FF82244E27B00938620 /* YYWebImageDownloadHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAC1FF72244E27B00938620 /* YYWebImageDownloadHandler.m */; };
 		BAAC20012244EC4500938620 /* SDWebImageDownlodHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAC20002244EC4500938620 /* SDWebImageDownlodHandler.m */; };
 /* End PBXBuildFile section */
@@ -68,7 +67,6 @@
 		966C647B13BD98C55D017D64 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		AA047C3FA7C4F0AD9600231D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AD30146D17710258493A6A56 /* Pods_JWWebImageCache_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JWWebImageCache_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAAC1FF42244CBED00938620 /* local.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = local.html; sourceTree = "<group>"; };
 		BAAC1FF62244E27B00938620 /* YYWebImageDownloadHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYWebImageDownloadHandler.h; sourceTree = "<group>"; };
 		BAAC1FF72244E27B00938620 /* YYWebImageDownloadHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYWebImageDownloadHandler.m; sourceTree = "<group>"; };
 		BAAC1FFF2244EC4500938620 /* SDWebImageDownlodHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownlodHandler.h; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BAAC1FF42244CBED00938620 /* local.html */,
 				6003F595195388D20070C39A /* JWWebImageCache-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -260,6 +257,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Justin.wang;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = VNF7UTGW24;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -292,7 +292,6 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				BAAC1FF52244CBEE00938620 /* local.html in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +510,7 @@
 			baseConfigurationReference = C983BE4A538D5F6FEEE1A2FD /* Pods-JWWebImageCache_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VNF7UTGW24;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JWWebImageCache/JWWebImageCache-Prefix.pch";
 				INFOPLIST_FILE = "JWWebImageCache/JWWebImageCache-Info.plist";
@@ -526,6 +526,7 @@
 			baseConfigurationReference = 42CCA1F7C47C18BF0495D9DB /* Pods-JWWebImageCache_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VNF7UTGW24;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JWWebImageCache/JWWebImageCache-Prefix.pch";
 				INFOPLIST_FILE = "JWWebImageCache/JWWebImageCache-Info.plist";
