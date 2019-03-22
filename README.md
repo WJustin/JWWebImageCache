@@ -23,11 +23,11 @@ pod 'JWWebImageCache', :git => 'https://github.com/WJustin/JWWebImageCache.git'
 ```
 ## Useage
 
- ### 1 Integrate image caching framework  
+ ### 1. Integrate image caching framework  
     if you use SDWebImage, you can copy the SDWebImageDownlodHandler class to your project.
     if you use YYWebImage, you can copy the YYWebImageDownloadHandler class to your project.
     
- ### 2 setup sdk
+ ### 2. setup sdk
     for example: SDWebImage
     id <JWDownloadProtocol> handler = [[SDWebImageDownlodHandler alloc] init];
     [JWWebImageCache setupWithDelegate:handler];
